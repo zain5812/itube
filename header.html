@@ -1,0 +1,21 @@
+<header>
+			<h1 class="brand" onClick="window.open('http://'+window.location.hostname+'/itube/','_self')">I-Tube</h1>
+			<?php
+			    if($status=="Sign Out"){
+			    $userFullName=$_SESSION['userFullName'];
+			    print "<img title='$userFullName' class='profile' src='profile.png'>";
+				}
+			    ?>
+			<ul class="navbar">
+			    <?php
+			    if($status=="Sign Out"){
+			    print "<li><a href='upload.php'>Upload</a></li>
+			    <li><a href='logout.php'>Sign Out</a></li>";
+			    }else{
+			       print "<li><a href='login.php'>Sign in</a></li>";
+			}
+			    ?>
+			 
+			</ul>
+
+	</header>
